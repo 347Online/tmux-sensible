@@ -99,9 +99,9 @@ main() {
 	fi
 
 	# required (only) on OS X
-	if is_osx && command_exists "reattach-to-user-namespace" && option_value_not_changed "default-command" ""; then
-		tmux set-option -g default-command "reattach-to-user-namespace -l $SHELL"
-	fi
+	# if is_osx && command_exists "reattach-to-user-namespace" && option_value_not_changed "default-command" ""; then
+	# 	tmux set-option -g default-command "reattach-to-user-namespace -l $SHELL"
+	# fi
 
 	# upgrade $TERM, tmux 1.9
 	if option_value_not_changed "default-terminal" "screen"; then
